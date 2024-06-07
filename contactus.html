@@ -1,0 +1,92 @@
+<head>
+    <title>ui pages</title>
+
+<style>
+    body{ 
+        background-image:url("imagee.jpg");
+        background-size: cover;
+        color:black
+}
+h1{
+    color:Black;
+    text-align:center;
+    padding-inline:120px;
+}
+nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: yellow;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        } 
+</style>
+</head>
+<body> 
+<nav>
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Registration.html">Registration</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Contactus.html">Contact us</a></li>
+    </ul>
+    </nav></body>
+
+
+     </style>
+     <script>
+    
+        function loginValidation() {
+        var FullName = document.myform.uname.value;
+        var PhoneNumber =  document.myform.number.value;
+        var Email = document.myform.email.value;
+        var Message =  document.myform.msg.value;
+                if(FullName==null || FullName=="") {
+                  alert("Invalid")
+                  console.log("Failed!")
+                  return false;  
+               }
+                if (phoneNumber.length<10){
+                  alert("Password Must be 6 letters")
+                  return false;
+               }
+                if(Email==null || Email=="") {
+                alert("please enter valid mail")
+                return false;
+               }
+               if(Message==null || Message==""){
+               alert("Invalid")
+                  return false;  
+               }
+               return true                 
+            }  
+            </script>         
+     </head>   
+    
+        <body>
+            <center>
+            <h1>Contact us</h1>
+            <form name="myform" action="home.html" onsubmit="return loginValidation(this)">
+        FullName:<input type="text" name="uname" placeholder="Name"><br>
+        Phone Number:<input type="int" name="number" placeholder="Number"><br>
+        Email:<input type="text" name="email" placeholder="Email"><br>
+         Message:<br>
+        <textarea name="msg" cols="15" rows="5" placeholder="message here..."></textarea><br>
+            <input type="submit" value="submit">
+            </center>
+    </body>
+    </html>

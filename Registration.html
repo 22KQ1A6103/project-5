@@ -1,0 +1,109 @@
+<html>    
+<head>
+ <title>Registration</title>
+<style>
+   
+    body{background-image:url(imagee.jpg);
+    background-size: cover;}
+
+h1{
+    color:black;
+}
+.test{
+    
+    font-size:20px;
+    padding:5px;
+}
+nav {
+                background-color: #333;
+                color: white;
+                padding: 10px;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+            nav ul li a {
+                color: yellow;
+                text-decoration: none;
+            }
+            nav ul li a:hover {
+                text-decoration: underline;
+            } 
+
+   </style>
+   <script>
+    
+    function loginValidation() {
+            
+    var Email = document.myform.email.value;
+    
+    var password = document.myform.password.value;
+    var Name = document.myform.uname.value;
+    var DateofBirth =  document.myform.bday.value;
+    var PhoneNumber =  document.myform.num.value;
+    var Address =  document.myform.saddress.value;
+            if(Email==null || Email=="") {
+              alert("Invalid")
+              console.log("Failed!")
+              return false;  
+           }
+            if (password.length<6){
+              alert("Password Must be 6 letters")
+              return false;
+           }
+            if(Name==null || Name=="") {
+            alert("please enter valid name")
+            return false;
+           }
+           if(DateofBirth==null ||DateofBirth==""){
+           alert("Invalid")
+              return false;  
+           }
+           return true                 
+        }  
+        </script>         
+   </head>
+   <body>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Registration.html">Registration</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="Contactus.html">Contact us</a></li>
+        </ul>
+        </nav></body>
+        <body>
+            <center>
+<h1>Regstration</h1>
+<form name="myform" action="login.html" onsubmit="return loginValidation(this)">
+<div class="test"> 
+Email:<input type="email" name="email" placeholder="Email">
+<br>
+</div>
+<div class="test">
+password:<input type="password" name="password" placeholder="password"><br></div>
+<div class="test">
+Name:<input type="text" name="uname" placeholder="Name"><br>
+</div>
+<div class="test">
+    Date of Birth:<input type="date" name="bday" placeholder="DOB"><br></div>
+    <div class="test">
+    Phone Number:<input type="tel" name="num" pattern="[0-9]{10}" placeholder="Number"><br></div>
+    <div class="test">
+Address:<input type="text" name="saddress" placeholder="address"><br></div>
+<div class="test">
+select gender:<br>
+<input type="radio" name="male">Male<br>
+<input type="radio" name="female">Female<br></div>
+<input type="submit" value="submit"> 
+</center>
+</form>
+</body>
+</html>
